@@ -1,0 +1,39 @@
+/* footer */
+footer {
+background-color: #23181A;
+color: #ADADAD;
+margin-top: 3em;
+}
+
+footer h5,
+footer img {
+margin-top: 5em;
+font-weight: bold;
+}
+
+footer address {
+margin-top: 5em;
+margin-bottom: 5em;
+color: #5A5A5A;
+}
+
+footer ul {
+margin-bottom: 5em;
+}
+
+footer address strong {
+color: #ADADAD;
+display: block;
+padding-bottom: 0.62em;
+}
+
+footer a {
+font-weight: 300;
+color: #5A5A5A;
+}
+
+footer a:hover {
+text-decoration: none;
+color: #000000;
+}
+
