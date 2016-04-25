@@ -10,6 +10,7 @@ class GigsController < ApplicationController
   # GET /gigs/1
   # GET /gigs/1.json
   def show
+    @gig = Gig.find(params[:id])
   end
 
   # GET /gigs/new

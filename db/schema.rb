@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20160422063908) do
   create_table "gigs", force: :cascade do |t|
     t.integer  "price"
     t.text     "details"
-    t.json     "pictures"
+    t.string   "pictures"
     t.boolean  "paid"
     t.integer  "user_id"
     t.datetime "created_at", null: false
@@ -46,14 +46,5 @@ ActiveRecord::Schema.define(version: 20160422063908) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-
-  create_table "vendors", force: :cascade do |t|
-    t.string   "description"
-    t.string   "video"
-    t.string   "category"
-    t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
 
 end
