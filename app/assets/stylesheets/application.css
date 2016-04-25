@@ -13,3 +13,221 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+/*jumbotron*/ 
+
+section#intro-header {
+background-image: url(http://sacemploymentlawyer.com/wp-content/uploads/2015/01/disabled-worker-rights-california.jpg);
+background-size: cover;
+
+}
+
+.container {
+background: rgba(36,25,25,0.3);
+background-size: auto;
+}
+
+section#intro-header .wrap-headline {
+padding-top: 20%;
+padding-bottom: 30%;
+}
+
+section#intro-header h1,
+section#intro-header h2 {
+color: #FFF;
+}
+
+section#intro-header h2 {
+font-size: 1.5rem;
+}
+
+section#intro-header hr {
+width: 10%;
+}
+
+section#intro-header .btn-default {
+background-color: rgba(255, 255, 255, 0.5);
+border: none;
+}
+
+section#intro-header .btn-primary {
+background-color: rgba(255, 255, 255, 0.5);
+border: none;
+}
+
+
+section#intro-header .input-group {
+padding-bottom: 10%;
+padding-left: 10%;
+padding-right: 10%;
+}
+
+.form-control:focus, .form-control:focus + span .btn{
+    border-color:#1ABC9C;
+    box-shadow:none;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  padding-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/* DIVIDER */
+
+.divider {
+  text-align: center;
+  padding: 50px;
+}
+
+
+/* profile header */
+
+.profile-jumbotron {
+background-size: cover;
+background-image: url(https://cdnil21.fiverrcdn.com/assets/v2_photos/user/bg-user-hero-cat-2-09982621c60750958a2503f66d630e65.jpg);
+
+}
+
+.profile-header {
+  font-size: 100px;
+  color:white;
+}
+
+.jumbotron-container {
+text-align: center;
+background-size: cover;
+background-blend-mode: 30%;
+padding-left: 400px;
+padding-right: 400px;
+padding-top: 50px;
+padding-bottom: 100px;
+}
+
+
+
+
+/*highlighted gigs */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic);
+
+font-family: 'Open Sans', sans-serif;
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  min-height: 3000px;
+  padding-top: 70px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.thumbnail {
+    position: relative;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+.thumbnail img {
+    max-width: 400px;
+    max-height: 200px;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+.navbar-header {
+  padding: 10px;
+  resize: auto;
+}
+
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+/* team segment */
+
+section#team ul {
+margin: 5rem 0;
+}
+
+section#team li {
+margin: 0 5rem;
+}
+
+section#team h5 {
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+
+/* @media for small devices */
+
+@media (max-width: 48em) {
+table .btn {
+font-size: 0.75rem;
+font-size: 3.5vw;
+    }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
