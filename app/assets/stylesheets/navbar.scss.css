@@ -1,0 +1,29 @@
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+.navbar-header {
+  padding: 10px;
+  resize: auto;
+}
+
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+.main {
+  background: rgba(255,255,255,0.7);
+}
+
+.profile-image {
+  max-height: 2.3em;
+border-radius: 0.3em;
+}
