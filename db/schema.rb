@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20160422063908) do
   create_table "gigs", force: :cascade do |t|
     t.integer  "price"
     t.text     "details"
-    t.json     "pictures"
+    t.string   "pictures"
     t.boolean  "paid"
     t.integer  "user_id"
     t.datetime "created_at", null: false

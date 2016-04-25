@@ -21,11 +21,12 @@
   </div>
   <div class="field">
     <%= f.label :pictures %><br>
-    <%= f.text_field :pictures %>
+    <%= f.file_field :pictures %>
   </div>
     <%= f.hidden_field :paid, value: false %><br>
     <%= f.hidden_field :user_id, value: @gig.id %><br>
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>

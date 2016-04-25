@@ -1,8 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Gigs</h1>
+<h2>ALL Gigs</h2>
+<%= link_to 'New Gig', new_gig_path %><br><br>
 
-<table>
+<div class="index">
+<div id="wrapper">
+  <div id="columns">
+    <% @gigs.each do |gig| %>
+    <div class="pin">  
+      <img src="<%= gig.pictures %>"/>
+      <h4><%= gig.details %></h4>
+      <p>Starting from: MYR<%= gig.price %></p>
+      <p>
+        <%= link_to 'Show', gig, class: "btn btn-info btn-xs" %>
+        <%= link_to 'Edit', edit_gig_path(gig), class: "btn btn-info btn-xs" %>
+        <%= link_to 'Delete', gig, class: "btn btn-info btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
+      <br>
+      <p>Vendor Name</p>
+      <p>Gig Category</p>
+    </div>
+    <% end %>
+  </div>
+</div>
+</body>
+
+<!-- 
+ <table>
   <thead>
     <tr>
       <th>Price</th>
@@ -32,4 +56,3 @@
 
 <br>
 
-<%= link_to 'New Gig', new_gig_path %>
