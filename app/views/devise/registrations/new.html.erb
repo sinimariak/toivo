@@ -37,7 +37,7 @@
 
     <div class="field">
       <%= f.label :vendor_category %><br />
-      <%= f.text_field :vendor_category %>
+      <%= f.select(:vendor_category, options_for_select([["- please select -", nil], ["People with disability", "People with disability"], ["Senior citizen", "Senior citizen"]])) %>
     </div>
 
     <div class="field">
