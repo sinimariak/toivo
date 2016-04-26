@@ -3,6 +3,12 @@
 <div class="container">
     <div class="row profile">
     <div class="col-md-3">
+
+        <div class="profile-userbuttons">
+         <!--  <button type="button" class="btn btn-success btn-sm"> -->
+          <%= link_to "Order Now", new_gig_purchase_path(@gig), :class => "btn btn-success btn-sm" %>
+        </div>
+      <br>
       <div class="profile-sidebar">
         <!-- SIDEBAR USERPIC -->
         <div class="profile-userpic">
@@ -105,7 +111,14 @@
 </div>
 </body>
 
+
 <br>
+
+
+<p>
+  <strong>User:</strong>
+  <%= @gig.user_id %>
+</p>
 
 
 <% @gig.pictures.each_with_index do |picture, index| %>

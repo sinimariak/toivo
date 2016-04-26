@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :gigs
+  resources :gigs do
+  resources :purchases
+  end
   get 'users/show'
 
   devise_for :users, :controllers => { registrations: 'registrations' }

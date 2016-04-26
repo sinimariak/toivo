@@ -12,5 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+	if ($("#user_vendor").prop('checked')) $("#vendor_fields").show();
+	else $("#vendor_fields").hide();
+});
+
+function toggle(className, obj) {
+    var $input = $(obj);
+    if ($input.prop('checked')) $(className).show();
+    else $(className).hide();
+}
+
