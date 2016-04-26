@@ -4,6 +4,8 @@ gem 'figaro'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'braintree'
+gem 'gon'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record

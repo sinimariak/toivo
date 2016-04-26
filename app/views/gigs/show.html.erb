@@ -14,7 +14,8 @@
     <div class="col-md-3">
 
         <div class="profile-userbuttons">
-          <button type="button" class="btn btn-success btn-sm">Order Now</button>
+         <!--  <button type="button" class="btn btn-success btn-sm"> -->
+          <%= link_to "Order Now", new_gig_purchase_path(@gig), :class => "btn btn-success btn-sm" %>
         </div>
       <br>
       <div class="profile-sidebar">
@@ -90,11 +91,6 @@
 <p>
   <strong>Pictures:</strong>
   <%= image_tag @gig.pictures.url(:thumb)%>
-</p>
-
-<p>
-  <strong>Paid:</strong>
-  <%= @gig.paid %>
 </p>
 
 <p>

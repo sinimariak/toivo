@@ -40,6 +40,8 @@ GEM
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    braintree (2.59.0)
+      builder (>= 2.0.0)
     builder (3.2.2)
     byebug (8.2.4)
     carrierwave (0.11.0)
@@ -68,6 +70,11 @@ GEM
       thor (~> 0.14)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gon (6.0.1)
+      actionpack (>= 3.0)
+      json
+      multi_json
+      request_store (>= 1.0)
     i18n (0.7.0)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -122,6 +129,7 @@ GEM
     rake (11.1.2)
     rdoc (4.2.2)
       json (~> 1.4)
+    request_store (1.3.1)
     responders (2.1.2)
       railties (>= 4.2.0, < 5.1)
     sass (3.4.22)
@@ -163,11 +171,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  braintree
   byebug
   carrierwave
   coffee-rails (~> 4.1.0)
   devise
   figaro
+  gon
   jbuilder (~> 2.0)
   jquery-rails
   mini_magick
