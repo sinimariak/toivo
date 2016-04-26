@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'figaro'
 gem 'devise'
-gem 'carrierwave'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
 gem 'braintree'
 gem 'gon'
