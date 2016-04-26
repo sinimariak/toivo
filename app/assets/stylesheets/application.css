@@ -16,18 +16,8 @@
 
 
 
-/*jumbotron 
 
-.jumbotron {
-    background-image: url(http://mediterranean-quality-care.com/wp-content/uploads/2011/07/shutterstock_51781633_smaller.jpg);
-    background-position: 15% 35%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    height: 25em;
-  }*/
-
-  section#intro-header {
+section#intro-header {
 background-image: url(http://sacemploymentlawyer.com/wp-content/uploads/2015/01/disabled-worker-rights-california.jpg);
 background-size: cover;
 
@@ -108,7 +98,23 @@ padding-right: 10%;
   }
 }
 
-
+/* notification bar */
+#notice-center {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  z-index: 999;
+  background: rgba(255, 153, 153, 0.8);
+  .alert .notice {
+      padding-top: 1000px;
+      text-align: center;
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+  }
+}
 
 /* Featurettes
 ------------------------- */

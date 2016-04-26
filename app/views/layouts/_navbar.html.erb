@@ -11,12 +11,13 @@
       <a href="/" class="navbar-brand"><img style="margin-top:-0.5em"<%= image_tag 'toivo-small.png'%></a>
     </div>
 
+
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top:0em">  
       <ul class="nav navbar-nav navbar-right">
         <% if signed_in? %>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <%= "#{current_user.name}  " "" %><img style="margin-left: 1.0em" class="profile-image img-rounded"<%= image_tag current_user.avatar %></></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <%= "#{current_user.name} "%><img style="margin-left: 0em" class="profile-image img-rounded"<%= image_tag current_user.avatar %></></a>
           <ul class="dropdown-menu">
             <li><%= link_to "My profile", "#" %></li>
             <li><%= link_to "My purchases", "#" %></li>
