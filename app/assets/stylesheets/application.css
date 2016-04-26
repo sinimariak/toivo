@@ -233,6 +233,7 @@ font-size: 3.5vw;
     margin-top: 20px;
   }
 
+
 .index {
 	background: url(http://subtlepatterns.com/patterns/scribble_light.png) ;
 }
@@ -309,7 +310,6 @@ font-size: 3.5vw;
 	opacity: 0.4;
 }
 
----------------------------------------------------
 
 .profile-body {
   background: #FEFEFE;
@@ -438,3 +438,4 @@ font-size: 3.5vw;
 	-o-transition: all .2s ease;
 	transition: all .2s ease;
 }
+

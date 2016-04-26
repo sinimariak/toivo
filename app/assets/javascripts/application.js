@@ -24,3 +24,4 @@ function toggle(className, obj) {
     if ($input.prop('checked')) $(className).show();
     else $(className).hide();
 }
+

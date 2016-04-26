@@ -3,7 +3,7 @@ class CreateGigs < ActiveRecord::Migration
     create_table :gigs do |t|
       t.integer  :price
       t.text     :details
-      t.string   :pictures
+      t.json     :pictures
       t.boolean  :paid
       t.integer  :user_id
 
