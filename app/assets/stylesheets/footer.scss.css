@@ -1,6 +1,6 @@
 /* footer */
 footer {
-background-color: #23181A;
+background-color: #000000;
 color: #ADADAD;
 margin-top: 3em;
 }
@@ -36,4 +36,5 @@ footer a:hover {
 text-decoration: none;
 color: #000000;
 }
+
 
