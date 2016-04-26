@@ -1,22 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <h2>ALL Gigs</h2>
-<%= link_to 'New Gig', new_gig_path %><br><br>
+<%= link_to 'New Gig', new_gig_path %>
 
 <div class="index">
 <div id="wrapper">
   <div id="columns">
     <% @gigs.each do |gig| %>
-    <div class="pin">  
-      <img src="<%= gig.pictures %>"/>
-      <h4><%= gig.details %></h4>
-      <p>Starting from: MYR<%= gig.price %></p>
-      <p>
-        <%= link_to 'Show', gig, class: "btn btn-info btn-xs" %>
-        <%= link_to 'Edit', edit_gig_path(gig), class: "btn btn-info btn-xs" %>
-        <%= link_to 'Delete', gig, class: "btn btn-info btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
-      </p>
-      <br>
+    <div class="pin"> 
+        <%if !gig.pictures[0].nil? %>
+          <%= image_tag gig.pictures[0].url(:index) %>
+        <%end%>
+        <h4><%= gig.details %></h4>
+        <p>Starting from: MYR<%= gig.price %></p>
+        <p>
+          <%= link_to 'View', gig, class: "btn btn-info btn-xs" %>
+          <%= link_to 'Book Now', gig, class: "btn btn-default btn-xs" %>
+          <%= link_to 'Purchase', gig, class: "btn btn-success btn-xs pull-right" %>
+        </p>
+          <h6><%= link_to 'Edit', edit_gig_path(gig) %>
+              <%= link_to 'Delete', gig, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </h6>
       <p>Vendor Name</p>
       <p>Gig Category</p>
     </div>
@@ -24,6 +28,7 @@
   </div>
 </div>
 </body>
+
 
 <!-- 
  <table>
