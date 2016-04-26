@@ -1,10 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+<div class="index">
+<div id="wrapper">
+
 <h2>ALL Gigs</h2>
 <%= link_to 'New Gig', new_gig_path %>
 
-<div class="index">
-<div id="wrapper">
+  <%= form_tag(gigs_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Gigs" %>
+    <%= submit_tag "Search", :name => nil %>
+  <% end %>
+
+  <br>
+
   <div id="columns">
     <% @gigs.each do |gig| %>
     <div class="pin"> 

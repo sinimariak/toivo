@@ -16,7 +16,34 @@
           <h1>Get Help, Give Hope</h1>
           <p>At Toivo, we believe that the greatest gift is a purpose. In helping others by letting them help you.</p>
           <p><a id="shakabtn" class="btn btn-lg btn-default" href="#" role="button">Find out how</a></p>
+
+<!--           <div class="row">
+                <div class="col-md-6">
+                    <div id="custom-search-input">
+                        <div class="input-group col-md-12">
+                            <input type="text" class="form-control input-lg" placeholder="Search" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-info btn-lg" type="button">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+          </div> -->
+
+
+
+
+
+
+
         </div>
+
+<%= form_tag(gigs_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Gigs" %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
 
     </div>
   </div>
