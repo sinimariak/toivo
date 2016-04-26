@@ -20,6 +20,10 @@
     <%= f.text_area :details %>
   </div>
   <div class="field">
+    <%= f.label :tag %><br />
+    <%= f.select(:tag, options_for_select([["None", nil], ["Arts & Craft", "Arts & Craft"], ["Literature & Translation", "Literature & Translation"], ["Music & Entertainment", "Music & Entertainment"], ["Education & Training", "Education & Training"], ["Home & Wellbeing", "Home & Wellbeing"]])) %>
+  </div>
+  <div class="field">
     <%= f.label :pictures %><br>
     <%= f.file_field :pictures, multiple: true %>
   </div>
