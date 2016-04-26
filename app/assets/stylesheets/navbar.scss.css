@@ -1,0 +1,48 @@
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+.navbar-header {
+  padding: 10px;
+  resize: auto;
+}
+
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+.main {
+  background: rgba(255,255,255,0.7);
+}
+
+.profile-image {
+  max-height: 2.3em;
+border-radius: 0.3em;
+}
+
+
+/* notification bar */
+#notice-center {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(255, 153, 153, 0.8);
+  .alert .notice {
+      padding: 2.5rem;
+      text-align: center;
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+  }
+}
