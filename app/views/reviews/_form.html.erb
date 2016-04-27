@@ -1,0 +1,15 @@
+<%= form_for [@gig, @review], url: gig_reviews_path do |f| %>
+
+<div class="field">
+	<%= f.label :content %><br>
+	<%= f.text_area :content %>
+</div>
+ </div>
+    <%= f.hidden_field :gig_id, value: @gig.id %><br>
+    <%= f.hidden_field :user_id, value: current_user.id %><br>
+<div class="actions">
+	<%= f.submit %>
+</div>
+
+<% end %>
+

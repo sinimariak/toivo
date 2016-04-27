@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
   resources :gigs do
   resources :purchases
+  resources :reviews 
   end
+
+ 
+
   get 'users/show'
 
   devise_for :users, :controllers => { registrations: 'registrations' }

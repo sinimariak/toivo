@@ -1,0 +1,8 @@
+<div class="container-blank">
+	Your purchases:
+	<% @purchases.each do |purchase| %>
+	<%= purchase.gig.title %>
+	Delivered by: <%= "#{purchase.gig.user.name}" %>
+	<%= render 'reviews/form' %>
+	<% end %>
+</div>
