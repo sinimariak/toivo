@@ -1,8 +1,11 @@
 class Gig < ActiveRecord::Base
-  belongs_to :user
+	searchkick
+	
+	belongs_to :user
 
-  has_many :pictures
-  has_many :purchases
+	has_many :pictures
+	has_many :purchases
 
-  mount_uploaders :pictures, PicturesUploader
+	mount_uploaders :pictures, PicturesUploader
 end
+
