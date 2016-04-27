@@ -15,6 +15,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+
   </head>
 
   <body>
@@ -22,7 +23,7 @@
     <%= yield %>
     <%=render partial: "layouts/footer" %>
     <!-- Latest JQuery scripts -->
-    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <!-- Braintree JavaScript -->

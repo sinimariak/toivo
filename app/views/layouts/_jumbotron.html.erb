@@ -6,9 +6,13 @@
       <div class="videoWrapper">
         <iframe width="1280" height="720" src="https://www.youtube.com/embed/9xPAExHmIxY?start=0&end=23&rel=0&autoplay=1&controls=0&loop=1&showinfo=0" frameborder="0" allowfullscreen=""></iframe>
       </div>
-      <div class="carousel-caption">
-        <h1>Get Help, Give Hope</h1>
-        <p>At Toivo, we believe that the greatest gift is a purpose. In helping others by letting them help you.</p>
+      <div class="carousel-caption">   
+          <div class="element">
+            <div class="sub-element">Get Help, Give Hope</div>
+            <div class="sub-element">We are more than just a disability</div>
+            <div class="sub-element"></div>
+          </div>
+ 
         <p><a id="shakabtn" class="btn btn-lg btn-default" href="#howitworks" role="button">Find out how</a></p>
         <%= form_tag(gigs_path, :method => "get", id: "search-form") do %>
           <div class="row">
@@ -45,3 +49,14 @@
     height: 100%;
   }
 </style>
+
+<script type="text/javascript" src="/assets/typed.js"></script>
+<script type="text/javascript">
+
+    $(function(){
+        $(".element").typed({
+            strings: ["First sentence.", "Second sentence."],
+            typeSpeed: 0
+        });
+    });
+</script>
