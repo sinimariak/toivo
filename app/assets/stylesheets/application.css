@@ -450,6 +450,14 @@ SEARCHBAR*/
     opacity: 0.4;
 }
 
+#custom-search-input:hover{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+    opacity: 0.8;
+}
+
 #custom-search-input input{
     border: 0;
     box-shadow: none;
