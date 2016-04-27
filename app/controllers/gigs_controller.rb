@@ -4,7 +4,16 @@ class GigsController < ApplicationController
   # GET /gigs
   # GET /gigs.json
   def index
-    @gigs = Gig.all
+    if params[:search]
+      @gigs = Gig.search(params[:search])
+    else
+      @gigs = Gig.all
+    end
+    # Gig.reindex
+    # gigs = Gig.search(params[:search])
+
+
+    # @gigs = Gig.all
   end
 
   # GET /gigs/1
@@ -62,6 +71,12 @@ class GigsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # def search
+  #   gig.each do |gig|
+  #     puts gig.details
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -71,6 +86,6 @@ class GigsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gig_params
-      params.require(:gig).permit(:price, :details, {pictures: []}, :user_id, :title)
+      params.require(:gig).permit(:price, :details, :tag, {pictures: []}, :user_id, :title)
     end
 end
