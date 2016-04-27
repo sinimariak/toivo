@@ -5,6 +5,7 @@ class GigsController < ApplicationController
   # GET /gigs.json
   def index
     if params[:search]
+      Gig.reindex
       @gigs = Gig.search(params[:search])
     else
       @gigs = Gig.all
