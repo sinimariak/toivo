@@ -9,4 +9,9 @@ class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
   ratyrate_rater
 	searchkick
+
+  def vendor?
+    return true if self.vendor == true
+  end
+
 end
