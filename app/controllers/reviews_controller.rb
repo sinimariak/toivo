@@ -5,7 +5,6 @@ class ReviewsController < ApplicationController
 	end
 
 	def new
-		byebug
 		@gig = Gig.new
 		@review = Review.new(review_params)
 	end
@@ -13,9 +12,9 @@ class ReviewsController < ApplicationController
 	def create
 		@review = Review.new(review_params)
 		if @review.save
-			redirect_to root_path
-		else
-			redirect_to gig_purchase_path
+			redirect_to gig_path(review_params[:gig_id])
+		else 
+			flash[:alert] = "Something went wrong. Please try again!"
 		end
 	end
 

@@ -21,7 +21,9 @@ class GigsController < ApplicationController
   # GET /gigs/1.json
   def show
     @gig = Gig.find(params[:id])
+    @review = Review.new
     @reviews = Review.all
+    
   end
 
   # GET /gigs/new

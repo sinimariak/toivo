@@ -1,8 +1,20 @@
-   <div class="profile-jumbotron">
-      <div class="jumbotron-container">
-           <img class="img-rounded responsive" width="150" height="150" <%= image_tag 'avatars/2.png' %> </>
-           <div class="profile-header">
-            <h1>Firstname Lastname </h1>
-            </div>
-      </div>
+<div class="profile-jumbotron">
+  <div class="jumbotron-container">
+    <img class="img-rounded responsive" width="150" height="150" <%= image_tag current_user.avatar %> </>
+    <div class="profile-header">
+      <h1><%= "#{current_user.name} "%></h1>
     </div>
+
+    <div class="vendor-header">
+      <% if current_user.vendor? %>
+    	  <h4>Vendor ID: <%= current_user.vendor_identification %></h4>
+    	  <h4>Vendor Description: <%= current_user.vendor_description %></h4>
+    	  <h4>Vendor Category: <%= current_user.vendor_category %></h4>
+    	  <h4>Video: <%= current_user.vendor_video_url %></h4>
+	    <% else %>
+	      <h4><%= link_to "Show your Talent!!", edit_user_registration_path(current_user) %></h4>
+	    <% end %>
+    </div>
+
+  </div>
+</div>

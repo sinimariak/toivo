@@ -3,28 +3,27 @@
 <div class="index">
 <div id="wrapper">
 
-<h2>ALL Gigs</h2>
-<%= link_to 'New Gig', new_gig_path %>
+<center><h2>Showing All Talents</h2></center><br>
 
   <%= form_tag(gigs_path, :method => "get", id: "search-form") do %>
-  <div class="row">
-    <div class="col-md-6">
-      <div id="custom-search-input">
-        <div class="input-group col-md-12">
-        <%= text_field_tag :search, params[:search], placeholder: "Search Gigs", class:"form-control input-lg" %>
-          
-          <span class="input-group-btn">
-            <%= submit_tag "Search", :name => nil, class:"btn btn-info btn-lg" %>
+    <div class="row">
+      <div class="col-md-6">
+        <div id="custom-search-input">
+          <div class="input-group col-md-12">
+          <%= text_field_tag :search, params[:search], placeholder: "Search Gigs", class:"form-control input-lg" %>
             
-   <!--          <button type="button">
-              <i class="glyphicon glyphicon-search"></i>
-            </button> -->
+            <span class="input-group-btn">
+              <%= submit_tag "Search", :name => nil, class:"btn btn-info btn-lg" %>
+              
+     <!--          <button type="button">
+                <i class="glyphicon glyphicon-search"></i>
+              </button> -->
 
-          </span>
+            </span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   <% end %>
 
   <br>
@@ -35,21 +34,24 @@
         <%if !gig.pictures[0].nil? %>
           <%= image_tag gig.pictures[0].url(:index) %>
         <% end %>
-        <h4><%= gig.details %></h4>
+        <h4><%= gig.title %></h4>
         <p>Starting from: MYR<%= gig.price %></p>
-        <p>
-          <%= link_to 'View', gig, class: "btn btn-info btn-xs" %>
-          <%= link_to 'Book Now', gig, class: "btn btn-default btn-xs" %>
-          <%= link_to 'Purchase', gig, class: "btn btn-success btn-xs pull-right" %>
-        </p>
-          <h6><%= link_to 'Edit', edit_gig_path(gig) %>
-              <%= link_to 'Delete', gig, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </h6>
-      <p>Vendor Name</p>
-      <p>Gig Category</p>
+
+            
+          <% if gig.user_id == current_user.id %>
+            <%= link_to 'View', gig, class: "btn btn-info btn-xs" %>
+            <%= link_to 'Edit', edit_gig_path(gig), class: "btn btn-default btn-xs" %>
+            <%= link_to 'Delete', gig, class: "btn btn-danger btn-xs pull-right", method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% else %>
+            <%= link_to 'View', gig, class: "btn btn-info btn-xs" %>
+            <%= link_to 'Book Now', gig, class: "btn btn-default btn-xs" %>
+            <%= link_to 'Purchase', gig, class: "btn btn-success btn-xs pull-right" %>
+          <% end %>
+
+      <p>Talent by <%= "#{gig.user.name} "%></p>
+      <p><%= gig.tag %></p>
     </div>
     <% end %>
   </div>
 </div>
 </body>
-

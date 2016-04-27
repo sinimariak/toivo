@@ -60,9 +60,9 @@
 	margin: 0;
 }
 
-.pin h4 {
+/*.pin h4 {
   height: 50px;
-}
+}*/
 
 @media (min-width: 960px) {
 	#columns {
@@ -223,4 +223,9 @@ body {
   padding: 20px;
   background: #fff;
   min-height: 460px;
+}
+
+.review-content {
+  padding: 20px;
+  background: #fff;
 }

@@ -28,8 +28,6 @@ class PurchasesController < ApplicationController
 	def show
 		@purchase = Purchase.find_by(user_id: current_user.id)
 		@purchases = Purchase.where(user_id: current_user.id).all
-		@gig = Gig.new
-		@review = Review.new
 	end
 
 	private
