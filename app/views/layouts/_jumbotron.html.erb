@@ -1,23 +1,16 @@
-
-<!-- Carousel
-================================================== -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: -100px;">
+<!-- Carousel -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: -100px; width: 100%;">
   <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-  </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-    <div class="videoWrapper">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/9xPAExHmIxY?start=0&end=23&rel=0&autoplay=1&controls=0&loop=1&showinfo=0" frameborder="0" allowfullscreen=""></iframe>
-    </div>
-
-        <div class="carousel-caption">
-          <h1>Get Help, Give Hope</h1>
-          <p>At Toivo, we believe that the greatest gift is a purpose. In helping others by letting them help you.</p>
-          <p><a id="shakabtn" class="btn btn-lg btn-default" href="#" role="button">Find out how</a></p>
-
-          <%= form_tag(gigs_path, :method => "get", id: "search-form") do %>
+      <div class="videoWrapper">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/9xPAExHmIxY?start=0&end=23&rel=0&autoplay=1&controls=0&loop=1&showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+      </div>
+      <div class="carousel-caption">
+        <h1>Get Help, Give Hope</h1>
+        <p>At Toivo, we believe that the greatest gift is a purpose. In helping others by letting them help you.</p>
+        <p><a id="shakabtn" class="btn btn-lg btn-default" href="#howitworks" role="button">Find out how</a></p>
+        <%= form_tag(gigs_path, :method => "get", id: "search-form") do %>
           <div class="row">
             <div class="col-md-6">
               <div id="custom-search-input">
@@ -26,26 +19,13 @@
                   
                   <span class="input-group-btn">
                     <%= submit_tag "Search", :name => nil, class:"btn btn-info btn-lg" %>
-                    
-           <!--          <button type="button">
-                      <i class="glyphicon glyphicon-search"></i>
-                    </button> -->
-
                   </span>
                 </div>
               </div>
             </div>
           </div>
-          <% end %>
-       
-        </div>
-        
-
-<!--         <%= form_tag(gigs_path, :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Search Gigs" %>
-         <%= submit_tag "Search", :name => nil %>
-        <% end %> -->
-        
+        <% end %>
+      </div>
     </div>
   </div>
 </div><!-- /.carousel -->
@@ -56,7 +36,7 @@
     padding-bottom: 56.25%;
     padding-top: 1px;
     height: 0;
-  }
+  }  
   .videoWrapper iframe {
     position: absolute;
     top: 0;
