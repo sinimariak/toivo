@@ -10,6 +10,21 @@
         <h1>Get Help, Give Hope</h1>
         <p>At Toivo, we believe that the greatest gift is a purpose. In helping others by letting them help you.</p>
         <p><a id="shakabtn" class="btn btn-lg btn-default" href="#howitworks" role="button">Find out how</a></p>
+        <%= form_tag(gigs_path, :method => "get", id: "search-form") do %>
+          <div class="row">
+            <div class="col-md-6">
+              <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                <%= text_field_tag :search, params[:search], placeholder: "Search Gigs", class:"form-control input-lg" %>
+                  
+                  <span class="input-group-btn">
+                    <%= submit_tag "Search", :name => nil, class:"btn btn-info btn-lg" %>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
