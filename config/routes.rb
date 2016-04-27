@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
+  
   resources :gigs do
-  resources :purchases
-  resources :reviews 
+    resources :purchases
+    resources :reviews 
   end
 
- 
-
   get 'users/show'
-
   get 'gigs/search'
+  get 'welcome/privacy'
+  get 'welcome/terms'
+  get 'welcome/help'
+  get 'welcome/team'
+  get 'welcome/mission'
   
   devise_for :users, :controllers => { registrations: 'registrations' }
   # The priority is based upon order of creation: first created -> highest priority.
