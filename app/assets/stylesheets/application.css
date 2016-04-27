@@ -441,11 +441,19 @@ font-size: 3.5vw;
 
 /*
 SEARCHBAR*/
+
+.col-md-6 {
+   float: none;
+   margin: 0 auto;
+   width: 500px;
+}
+
 #custom-search-input{
     padding: 3px;
     border: solid 1px #E4E4E4;
     border-radius: 6px;
     background-color: #fff;
+    opacity: 0.4;
 }
 
 #custom-search-input input{
