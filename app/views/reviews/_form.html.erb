@@ -1,15 +1,11 @@
-<%= form_for [@gig, @review], url: gig_reviews_path do |f| %>
+<%= form_for [@gig, @review], url: gig_reviews_path(@gig.id) do |f| %>
 
-<div class="field">
-	<%= f.label :content %><br>
-	<%= f.text_area :content %>
+<div class="form-group">
+	<label for="comment">Comment:</label>
+	<%= f.text_area :content, :class => "form-control" %>
+    <%= f.hidden_field :gig_id, value: @gig.id %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    </div>
+	<%= submit_tag "Comment", :class => "btn btn-success" %>
 </div>
- </div>
-    <%= f.hidden_field :gig_id, value: @gig.id %><br>
-    <%= f.hidden_field :user_id, value: current_user.id %><br>
-<div class="actions">
-	<%= f.submit %>
-</div>
-
 <% end %>
-

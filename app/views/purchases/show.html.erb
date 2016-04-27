@@ -2,6 +2,5 @@
 		<h2>Your purchases</h2>
 		<% @purchases.each do |purchase| %>
 		<%= purchase.gig.title %>
-		<%= render :partial => "reviews/form" %>
 		<% end %>
 </div>

@@ -224,3 +224,8 @@ body {
   background: #fff;
   min-height: 460px;
 }
+
+.review-content {
+  padding: 20px;
+  background: #fff;
+}
