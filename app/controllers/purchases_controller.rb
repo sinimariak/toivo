@@ -1,12 +1,14 @@
 class PurchasesController < ApplicationController
 
 	def index
+		@purchase = Purchase.find_by(user_id: current_user.id)
+		@purchases = Purchase.where(user_id: current_user.id).all
 	end
 
 	def new
-	  	gon.client_token = generate_client_token
+	  	@client_token = generate_client_token
 	  	@gig = Gig.find(params[:gig_id])
-	  	@purchase = Purchase.new(user_id: current_user.id)
+	  	@purchase = Purchase.new(user_id: current_user.id, gig_id: @gig.id)
 	end
 
 	def create
@@ -25,10 +27,17 @@ class PurchasesController < ApplicationController
 
 	def show
 		@purchase = Purchase.find_by(user_id: current_user.id)
+		@purchases = Purchase.where(user_id: current_user.id).all
+		@gig = Gig.new
+		@review = Review.new
 	end
 
 	private
 	def generate_client_token
-  	Braintree::ClientToken.generate
+  		Braintree::ClientToken.generate
 	end
+
+	def purchase_params
+     	params.require(:purchase).permit(:gig_id, :user_id, :paid, :transaction_id)
+    end
 end
