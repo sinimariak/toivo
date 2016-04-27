@@ -1,11 +1,9 @@
 class Gig < ActiveRecord::Base
 	searchkick
-	
 	belongs_to :user
-
-	has_many :pictures
-	has_many :purchases
-
-	mount_uploaders :pictures, PicturesUploader
+  has_many :pictures
+  has_many :purchases
+  has_many :reviews, :dependent => :destroy
+  mount_uploaders :pictures, PicturesUploader
+  ratyrate_rateable 'Service'
 end
-

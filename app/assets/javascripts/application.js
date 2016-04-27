@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require jquery.raty
+//= require ratyrate
 
 $(document).ready(function(){
 	if ($("#user_vendor").prop('checked')) $("#vendor_fields").show();

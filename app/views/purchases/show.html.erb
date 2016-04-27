@@ -1,4 +1,7 @@
-<div class="container-blank">
-	<h1>Thank you for your purchase.</h1>
-	<%= @purchase.gig.details %></h2>
+<div class="container">
+		<h2>Your purchases</h2>
+		<% @purchases.each do |purchase| %>
+		<%= purchase.gig.title %>
+		<%= render :partial => "reviews/form" %>
+		<% end %>
 </div>
