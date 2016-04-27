@@ -4,24 +4,26 @@
     <div class="row profile">
     <div class="col-md-3">
 
-        <div class="profile-userbuttons">
-         <!--  <button type="button" class="btn btn-success btn-sm"> -->
-          <%= link_to "Order Now", new_gig_purchase_path(@gig.id), :class => "btn btn-success btn-sm" %>
-        </div>
+        <% if @gig.user_id != current_user.id %>
+          <div class="profile-userbuttons">
+           <!--  <button type="button" class="btn btn-success btn-sm"> -->
+            <%= link_to "Order Now", new_gig_purchase_path(@gig.id), :class => "btn btn-success btn-sm" %>
+          </div>
+        <% end %>
       <br>
       <div class="profile-sidebar">
         <!-- SIDEBAR USERPIC -->
         <div class="profile-userpic">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4iIqZTl8CdYP5yDZhR2xCuVYdUDR4bO2c-phM0bCahpjpSMI5RA" class="img-responsive" alt="">
+          <img class="img-responsive" alt="" <%= image_tag @gig.user.avatar %></>
         </div>
         <!-- END SIDEBAR USERPIC -->
         <!-- SIDEBAR USER TITLE -->
         <div class="profile-usertitle">
           <div class="profile-usertitle-name">
-            Vendor Name
+            <%= "#{@gig.user.name} "%>
           </div>
           <div class="profile-usertitle-job">
-            Category
+            <%= @gig.tag %>
           </div>
         </div>
         <!-- END SIDEBAR USER TITLE -->
@@ -52,16 +54,18 @@
         </div>
         <!-- END MENU -->
         <!-- SIDEBAR BUTTONS -->
-        <div class="profile-userbuttons">
-          <button type="button" class="btn btn-success btn-sm">Order Now</button>
-          <button type="button" class="btn btn-default btn-sm">Contact Me</button>
-        </div>
+        <% if @gig.user_id == current_user.id %>
+          <div class="profile-userbuttons">
+            <%= link_to "Edit", edit_gig_path, class: "btn btn-success btn-sm" %>
+            <%= button_to "Delete", {:controller => "gigs", :action => 'destroy', :id => @gig.id}, :confirm => "Are you sure you want to delete #{@gig.title}?", :method => :delete, class: "btn btn-danger btn-sm" %>
+          </div>
+        <% end %>
         <!-- END SIDEBAR BUTTONS -->
       </div>
     </div>
     <div class="col-md-9">
       <div class="profile-content">
-        <h2><%= @gig.details %></h2> 
+        <h2><%= @gig.title %></h2> 
         <%= rating_for @gig, "Service" %>
 
            <div class="carousel">
@@ -77,8 +81,9 @@
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
+            
                   <div class="item active">
-                    <img src="http://www.w3schools.com/bootstrap/img_chania.jpg" alt="Chania" width="460" height="345">
+                    <img src="http://www.w3schools.com/bootstrap/img_chania2.jpg" alt="Chania" width="460" height="345">
                   </div>
 
                   <div class="item">
@@ -106,6 +111,10 @@
               </div>
             </div>
 
+        <h4><%= @gig.details %></h4> 
+              <% @gig.pictures.each_with_index do |picture, index| %>
+                  <%= image_tag @gig.pictures[index].url(:index) %>
+                  <% end %>
       </div>
     </div>
   </div>
@@ -128,12 +137,3 @@
 <br>
 
 
-<p>
-  <strong>User:</strong>
-  <%= @gig.user_id %>
-</p>
-
-
-<% @gig.pictures.each_with_index do |picture, index| %>
-<%= image_tag @gig.pictures[index].url(:index) %>
-<% end %>

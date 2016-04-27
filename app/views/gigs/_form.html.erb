@@ -1,8 +1,8 @@
 <%= form_for(@gig) do |f| %>
+
   <% if @gig.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@gig.errors.count, "error") %> prohibited this gig from being saved:</h2>
-
       <ul>
       <% @gig.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,30 +11,45 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.number_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :details %><br>
-    <%= f.text_area :details %>
-  </div>
-  <div class="field">
-    <%= f.label :tag %><br />
-    <%= f.select(:tag, options_for_select([["None", nil], ["Arts & Craft", "Arts & Craft"], ["Literature & Translation", "Literature & Translation"], ["Music & Entertainment", "Music & Entertainment"], ["Education & Training", "Education & Training"], ["Home & Wellbeing", "Home & Wellbeing"]])) %>
-  </div>
-  <div class="field">
-    <%= f.label :pictures %><br>
-    <%= f.file_field :pictures, multiple: true %>
-  </div>
-    <%= f.hidden_field :paid, value: false %><br>
-    <%= f.hidden_field :user_id, value: current_user.id %><br>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="container-fluid">
+    <section class="container">
+      <div class="container-page">        
+   
+        <div class="col-md-6">
+          
+          <div class="form-group col-lg-12">
+            <label>Title</label>
+            <input type="" name="" class="form-control" id="" value="" <%= f.text_field :title %></>
+          </div>
+          
+          <div class="form-group col-lg-12">
+            <label>Price</label>
+            <input type="" name="" class="form-control" id="" value="" <%= f.number_field :price %></>
+          </div>
+                  
+          <div class="form-group col-lg-12">
+            <label>Details</label>
+            <input type="" name="" class="form-control" id="" value="" <%= f.text_area :details %></>
+          </div>  
+
+          <div class="form-group col-lg-12">
+            <label>Tag</label>
+            <%= f.select(:tag, options_for_select([["None", nil], ["Arts & Craft", "Arts & Craft"], ["Literature & Translation", "Literature & Translation"], ["Music & Entertainment", "Music & Entertainment"], ["Education & Training", "Education & Training"], ["Home & Wellbeing", "Home & Wellbeing"]])) %> </>
+          </div>         
+          
+          <div class="form-group col-lg-12">
+            <label>Pictures</label>
+            <%= f.file_field :pictures, multiple: true %>
+          </div> 
+          
+          <br>
+          <div class="form-group col-lg-12"> 
+            <button type="submit" class="btn btn-primary">Show Your Talent</button>
+          </div>
+          
+        </div>
+      </div>
+    </section>
   </div>
 
 <% end %>
