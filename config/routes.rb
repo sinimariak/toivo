@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :reviews 
   end
 
+  get 'profiles/purchases', to: 'profiles#purchases'
   get 'users/show'
   get 'gigs/search'
   get 'welcome/privacy'

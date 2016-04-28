@@ -1,6 +1,5 @@
 <div class="container">
-		<h2>Your purchases</h2>
-		<% @purchases.each do |purchase| %>
-		<%= purchase.gig.title %>
-		<% end %>
+		<h3>Thank you for your purchase.</h3>
+		<%= @purchase.gig.title %><br>
+		Delivered by <%= link_to "#{@purchase.gig.user.name}", users_show_path(id: @purchase.gig.user.id) %>
 </div>
