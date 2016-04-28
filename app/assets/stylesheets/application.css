@@ -16,16 +16,6 @@
 
 /*jumbotron*/ 
 
-section#intro-header {
-background-image: url(http://sacemploymentlawyer.com/wp-content/uploads/2015/01/disabled-worker-rights-california.jpg);
-background-size: cover;
-
-}
-
-.container {
-background: #F1F3FA;
-}
-
 section#intro-header .wrap-headline {
 padding-top: 20%;
 padding-bottom: 30%;
@@ -278,11 +268,6 @@ font-size: 3.5vw;
   .navbar-wrapper {
     margin-top: 20px;
   }
-
-
-.index {
-	background: url(http://subtlepatterns.com/patterns/scribble_light.png) ;
-}
 
 #wrapper {
 	width: 90%;
