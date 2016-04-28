@@ -8,9 +8,9 @@
       </div>
       <div class="carousel-caption">   
           <div class="element">
-            <div class="sub-element">Get Help, Give Hope</div>
-            <div class="sub-element">We are more than just a disability</div>
-            <div class="sub-element"></div>
+            <div class="sub-element">Toivo helps special talents find work</div>
+            <div class="sub-element">Toivo helps you pay for school</div>
+            <div class="sub-element">Toivo gives you hope</div>
           </div>
  
         <p><a id="shakabtn" class="btn btn-lg btn-default" href="#howitworks" role="button">Find out how</a></p>
@@ -19,7 +19,7 @@
             <div class="col-md-6">
               <div id="custom-search-input">
                 <div class="input-group col-md-12">
-                <%= text_field_tag :search, params[:search], placeholder: "Search Talents", class:"form-control input-lg" %>
+                <%= text_field_tag :search, params[:search], placeholder: "Search Available Services", class:"form-control input-lg" %>
                   
                   <span class="input-group-btn">
                     <%= submit_tag "Search", :name => nil, class:"btn btn-info btn-lg" %>
@@ -56,7 +56,7 @@
     $(function(){
         $(".element").typed({
             strings: ["First sentence.", "Second sentence."],
-            typeSpeed: 0
+            typeSpeed: -1
         });
     });
 </script>
