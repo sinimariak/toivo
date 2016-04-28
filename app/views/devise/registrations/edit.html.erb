@@ -1,6 +1,7 @@
+
 <div class="container" style="background:transparent;">
   <div class="row">
-    <div class="col-md-6 col-md-offset-2">
+    <div class="col-md-7 col-md-offset-2">
       <div class="panel panel-default">
 
         <div class="panel-heading">
@@ -22,7 +23,7 @@
                       <input type="name" class="form-control" id="inputname" placeholder="Name" required <%= f.text_field :name, autofocus: true %></>
                   </div>
               </div>
-
+<br><br>       
               <div class="form-group">
                   <label for="inputLocation" class="col-sm-3 control-label" >
                       Location </label>
@@ -30,7 +31,7 @@
                       <input type="location" class="form-control" id="inputlocation" placeholder="Location" required <%= f.text_field :location, autofocus: true %></>
                   </div>
               </div>
-
+<br><br> 
               <div class="form-group">
                   <label for="inputEmail3" class="col-sm-3 control-label" >
                       Email </label>
@@ -38,7 +39,7 @@
                       <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required <%= f.email_field :email, autofocus: true %></>
                   </div>
               </div>
-
+<br><br><br>
               <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
                 <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
               <% end %>
@@ -47,50 +48,49 @@
                   <%= f.label "Would you like to be a vendor?"%><br />
                   <%= f.check_box :vendor, onclick:"toggle('#vendor_fields', this)" %> If yes, please provide additional details for verification<br />
               </div>
-
+<br><br> 
                       <div id="vendor_fields">
 
                        <div class="field">
                           <%= f.label :vendor_identification %><br />
                           <%= f.text_field :vendor_identification, class:"form-control"  %>
                         </div>
-
+<br>
                         <div class="field">
                           <%= f.label :vendor_description %><br />
                           <%= f.text_area :vendor_description, class:"form-control"  %>
                         </div>
-
-                        <div class="field">
+<br>                    <div class="field">
                           <%= f.label :vendor_category %><br />
                           <%= f.select(:vendor_category, options_for_select([["- please select -", nil], ["People with disability", "People with disability"], ["Senior citizen", "Senior citizen"]])) %>
                         </div>
-
+<br> 
                         <div class="field">
                           <%= f.label :vendor_video_url %><br />
                           <%= f.text_field :vendor_video_url, class:"form-control"  %>
                         </div>
                       </div>
-
+<br> 
               <div class="field">
                 <%= f.label :avatar %><br />
                 <%= f.file_field :avatar %>
               </div>
-
+<br> 
               <div class="field">
                 <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
                 <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
               </div>
-
+<br> 
               <div class="field">
                 <%= f.label :password_confirmation %><br />
                 <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
               </div>
-
+<br> 
               <div class="field">
                 <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
                 <%= f.password_field :current_password, autocomplete: "off", class:"form-control" %>
               </div>
-
+<br> 
               <div class="form-group last">
                   <div class="col-sm-offset-4 col-sm-9">
                       <button type="submit" class="btn btn-success btn-sm">

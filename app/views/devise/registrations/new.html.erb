@@ -1,6 +1,7 @@
+
 <div class="container" style="background:transparent;">
   <div class="row">
-    <div class="col-md-4 col-md-offset-7">
+    <div class="col-md-5 col-md-offset-4">
       <div class="panel panel-default">
 
         <div class="panel-heading">
@@ -20,7 +21,7 @@
                       <input type="name" class="form-control" id="inputname" placeholder="Name" required <%= f.text_field :name, autofocus: true %></>
                   </div>
               </div>
-
+<br><br>
               <div class="form-group">
                   <label for="inputLocation" class="col-sm-3 control-label" >
                       Location </label>
@@ -28,7 +29,7 @@
                       <input type="location" class="form-control" id="inputlocation" placeholder="Location" required <%= f.text_field :location, autofocus: true %></>
                   </div>
               </div>
-
+<br><br>
               <div class="form-group">
                   <label for="inputEmail3" class="col-sm-3 control-label" >
                       Email </label>
@@ -36,39 +37,39 @@
                       <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required <%= f.email_field :email, autofocus: true %></>
                   </div>
               </div>
-
+<br><br><br>
               <div class="field">
                   <%= f.label "Would you like to be a vendor?"%><br />
                   <%= f.check_box :vendor, onclick:"toggle('#vendor_fields', this)" %> If yes, please provide additional details for verification<br />
               </div>
-
+<br>
                       <div id="vendor_fields">
                         <div class="field">
                           <%= f.label :vendor_identification %><br />
                           <%= f.text_field :vendor_identification, class:"form-control"  %>
                         </div>
-
+<br>
                         <div class="field">
                           <%= f.label :vendor_description %><br />
                           <%= f.text_area :vendor_description, class:"form-control"  %>
                         </div>
-
+<br>
                         <div class="field">
                           <%= f.label :vendor_category %><br />
                           <%= f.select(:vendor_category, options_for_select([["- please select -", nil], ["People with disability", "People with disability"], ["Senior citizen", "Senior citizen"]])) %>
                         </div>
-
+<br>
                         <div class="field">
                           <%= f.label :vendor_video_url %><br />
                           <%= f.text_field :vendor_video_url, class:"form-control"  %>
                         </div>
                       </div>
-
+<br>
               <div class="field">
                 <%= f.label :avatar %><br />
                 <%= f.file_field :avatar %>
               </div>
-
+<br>
               <div class="field">
                 <%= f.label :password %>
                 <% if @minimum_password_length %>
@@ -76,14 +77,14 @@
                 <% end %><br />
                 <%= f.password_field :password, autocomplete: "off",  class:"form-control"%>
               </div>
-
+<br>
               <div class="field">
                 <%= f.label :password_confirmation %><br />
                 <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
               </div>
-
+<br>
               <div class="form-group last">
-                  <div class="col-sm-offset-3 col-sm-9">
+                  <div class="col-sm-offset-4 col-sm-9">
                       <button type="submit" class="btn btn-success btn-sm">
                           Sign Up</button>
                            <button type="reset" class="btn btn-default btn-sm">
