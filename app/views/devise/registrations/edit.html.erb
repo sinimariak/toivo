@@ -1,83 +1,114 @@
-<div class="container">
-  <h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="container" style="background:transparent;">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-2">
+      <div class="panel panel-default">
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <%= devise_error_messages! %>
+        <div class="panel-heading">
+            <h4>Edit <%= resource_name.to_s.humanize %></h4>
+        </div>
 
-    <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :name, autofocus: true %>
-    </div>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= devise_error_messages! %>
 
-    <div class="field">
-      <%= f.label :location %><br />
-      <%= f.text_field :location, autofocus: true %>
-    </div>
+<div class="panel-body">
+<form class="form-horizontal" role="form">
 
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
-    </div>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-    <% end %>
 
-    <div class="field">
-        <%= f.label "Would you like to be a vendor?"%><br />
-        <%= f.check_box :vendor, onclick:"toggle('#vendor_fields', this)" %> If yes, please provide additional details for verification<br />
-    </div>
+              <div class="form-group">
+                  <label for="inputName" class="col-sm-3 control-label" >
+                      Name </label>
+                  <div class="col-sm-9">
+                      <input type="name" class="form-control" id="inputname" placeholder="Name" required <%= f.text_field :name, autofocus: true %></>
+                  </div>
+              </div>
 
-  <div id="vendor_fields">
-    <div class="field">
-      <%= f.label :vendor_identification %><br />
-      <%= f.text_field :vendor_identification %>
-    </div>
+              <div class="form-group">
+                  <label for="inputLocation" class="col-sm-3 control-label" >
+                      Location </label>
+                  <div class="col-sm-9">
+                      <input type="location" class="form-control" id="inputlocation" placeholder="Location" required <%= f.text_field :location, autofocus: true %></>
+                  </div>
+              </div>
 
-    <div class="field">
-      <%= f.label :vendor_description %><br />
-      <%= f.text_area :vendor_description %>
-    </div>
+              <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label" >
+                      Email </label>
+                  <div class="col-sm-9">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required <%= f.email_field :email, autofocus: true %></>
+                  </div>
+              </div>
 
-    <div class="field">
-      <%= f.label :vendor_category %><br />
-      <%= f.select(:vendor_category, options_for_select([["- please select -", nil], ["People with disability", "People with disability"], ["Senior citizen", "Senior citizen"]])) %>
-    </div>
+              <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+              <% end %>
 
-    <div class="field">
-      <%= f.label "YouTube Video ID" %><br />
-      <%= f.text_field :vendor_video_url %>
-    </div>
+              <div class="field">
+                  <%= f.label "Would you like to be a vendor?"%><br />
+                  <%= f.check_box :vendor, onclick:"toggle('#vendor_fields', this)" %> If yes, please provide additional details for verification<br />
+              </div>
+
+                      <div id="vendor_fields">
+
+                       <div class="field">
+                          <%= f.label :vendor_identification %><br />
+                          <%= f.text_field :vendor_identification, class:"form-control"  %>
+                        </div>
+
+                        <div class="field">
+                          <%= f.label :vendor_description %><br />
+                          <%= f.text_area :vendor_description, class:"form-control"  %>
+                        </div>
+
+                        <div class="field">
+                          <%= f.label :vendor_category %><br />
+                          <%= f.select(:vendor_category, options_for_select([["- please select -", nil], ["People with disability", "People with disability"], ["Senior citizen", "Senior citizen"]])) %>
+                        </div>
+
+                        <div class="field">
+                          <%= f.label :vendor_video_url %><br />
+                          <%= f.text_field :vendor_video_url, class:"form-control"  %>
+                        </div>
+                      </div>
+
+              <div class="field">
+                <%= f.label :avatar %><br />
+                <%= f.file_field :avatar %>
+              </div>
+
+              <div class="field">
+                <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+                <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
+              </div>
+
+              <div class="field">
+                <%= f.label :password_confirmation %><br />
+                <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
+              </div>
+
+              <div class="field">
+                <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+                <%= f.password_field :current_password, autocomplete: "off", class:"form-control" %>
+              </div>
+
+              <div class="form-group last">
+                  <div class="col-sm-offset-4 col-sm-9">
+                      <button type="submit" class="btn btn-success btn-sm">
+                          Update</button>
+                           <button type="reset" class="btn btn-default btn-sm">
+                          Reset</button>
+                  </div>
+              </div>
+
+  </form>
   </div>
-
-    <div class="field">
-      <%= f.label :avatar %><br />
-      <%= f.file_field :avatar %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-      <%= f.password_field :current_password, autocomplete: "off" %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit "Update" %>
-    </div>
   <% end %>
 
-  <h3>Cancel my account</h3>
+        <div class="panel-heading">
+          <%= button_to "Cancel my account",registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"btn btn-danger btn-sm" %>
+        </div>
 
-  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-  <%= link_to "Back", :back %>
+      </div>
+    </div>
+  </div>
 </div>
