@@ -1,32 +1,30 @@
 <body>
-      <div class="index">
-      <div id="wrapper">
+<p id="notice"><%= notice %></p>
 
-      <center><h2>Showing All Talents</h2></center><br>
+<div class="index">
+<div id="wrapper">
 
-        <%= form_tag(gigs_path, :method => "get", id: "search-form") do %>
-          <div class="row">
-            <div class="col-md-6">
-              <div id="custom-search-input">
-                <div class="input-group col-md-12">
-                <%= text_field_tag :search, params[:search], placeholder: "Search Available Services", class:"form-control input-lg" %>
-                  
-                  <span class="input-group-btn">
-                    <%= submit_tag "Search", :name => nil, class:"btn btn-info btn-lg" %>
-                    
-           <!--          <button type="button">
-                      <i class="glyphicon glyphicon-search"></i>
-                    </button> -->
+<center><h2>All Services</h2></center><br>
 
-                  </span>
-                </div>
-              </div>
-            </div>
+  <%= form_tag(gigs_path, :method => "get", id: "search-form") do %>
+    <div class="row">
+      <div class="col-md-6">
+        <div id="custom-search-input">
+          <div class="input-group col-md-12">
+          <%= text_field_tag :search, params[:search], placeholder: "Search Services", class:"form-control input-lg" %>
+            
+            <span class="input-group-btn">
+              <%= submit_tag "Search", :name => nil, class:"btn btn-info btn-lg" %>
+              
+     <!--          <button type="button">
+                <i class="glyphicon glyphicon-search"></i>
+              </button> -->
+            </span>
           </div>
+        </div>
       </div>
- </div>
-
-        <% end %>
+    </div>
+  <% end %>
 
     <br>
 

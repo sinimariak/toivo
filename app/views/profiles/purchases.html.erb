@@ -1,0 +1,19 @@
+<div class="index">
+<div id="wrapper">
+
+<center><h2>My purchases</h2></center><br>
+
+<div id="columns">
+    <% @purchases.each do |purchase| %>
+    <div class="pin"> 
+        <%if !purchase.gig.pictures[0].nil? %>
+          <%= image_tag purchase.gig.pictures[0].url(:index) %>
+        <% end %>
+        <h4><%= purchase.gig.title %></h4>
+        <p>MYR<%= purchase.gig.price %></p>
+            <%= link_to 'View', gig_path(id: purchase.gig.id), class: "btn btn-info btn-xs" %>
+   	</div>
+    <% end %>
+</div>
+</div>
+</div>
