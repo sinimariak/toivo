@@ -1,3 +1,38 @@
-<%= render "layouts/navbar" %>
-<%= render "profile/profile"%>
-<%= render "profile/gigs" %>
+<div class="profile-jumbotron">
+  <div class="jumbotron-container">
+    <%= image_tag @user.avatar_url(:profile), class:"img-rounded responsive" %>
+    <div class="profile-header">
+      <h1><%= @user.name %></h1>
+      <h4><%= @user.email %></h4>
+      <h4><%= @user.location %></h4>
+      <% if @user.vendor? %>
+        <h6 style="color:#FF0022"><%= @user.name %> is a Toivo Talent</h6>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <br>
+  <% if @user.vendor? %>
+    <div class="row">
+      <div class="col-lg-7">
+        <% if (@user.vendor_video_url == nil || @user.vendor_video_url == "") %>
+          <h4>This Talent had not shared any video yet</h4>
+        <% else %>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @user.vendor_video_url %>" frameborder="0" allowfullscreen></iframe>
+        <% end %>
+      </div>
+      <div class="col-lg-5">
+        <strong>Talent Description:</strong> 
+        <p><%= @user.vendor_description %></p>
+        <strong>Talent Category:</strong> 
+        <p><%= @user.vendor_category %></p>
+      </div>
+    </div>
+  <% else %>
+    <% if @user == current_user %>
+      <h1><%= link_to "Show your Talent!!", edit_user_registration_path(current_user) %></h1>
+    <% end %>
+  <% end %>
+</div>
