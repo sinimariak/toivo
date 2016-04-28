@@ -41,6 +41,8 @@
             <label>Pictures</label>
             <%= f.file_field :pictures, multiple: true %>
           </div> 
+
+          <%= f.hidden_field :user_id, value: current_user.id %>
           
           <br>
           <div class="form-group col-lg-12"> 
