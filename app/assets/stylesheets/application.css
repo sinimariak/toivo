@@ -66,6 +66,20 @@ padding-right: 10%;
     box-shadow:none;
 }
 
+.searchpage-container {
+text-align: center;
+background-size: cover;
+background-blend-mode: 30%;
+padding-left: 400px;
+padding-right: 400px;
+padding-top: 50px;
+padding-bottom: 100px;
+}
+
+.searchpage-header {
+  background-size: auto;
+  background-image: url(https://cdnil21.fiverrcdn.com/assets/v2_photos/user/bg-user-hero-cat-2-09982621c60750958a2503f66d630e65.jpg);
+}
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
