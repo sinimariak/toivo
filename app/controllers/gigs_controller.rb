@@ -12,8 +12,6 @@ class GigsController < ApplicationController
     end
     # Gig.reindex
     # gigs = Gig.search(params[:search])
-
-
     # @gigs = Gig.all
   end
 

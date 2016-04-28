@@ -3,11 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
  /* Gig index page */
-
-.index {
-	background: url(http://subtlepatterns.com/patterns/scribble_light.png) ;
-}
-
 #wrapper {
 	width: 90%;
 	max-width: 1100px;

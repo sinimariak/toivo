@@ -485,8 +485,7 @@ font-size: 3.5vw;
 	transition: all .2s ease;
 }
 
-/*
-SEARCHBAR*/
+/* SEARCHBAR */
 
 .col-md-6 {
   float: none;
@@ -539,3 +538,17 @@ SEARCHBAR*/
 .center {
   align:center;
 }
+
+/* SIGN_IN */
+
+body { 
+  background: url() no-repeat center center fixed; 
+  background-size: 100% 100%;
+  min-height: 100%;
+}
+
+.panel-default {
+opacity: 0.9;
+margin-top:30px;
+}
+.form-group.last { margin-bottom:0px; }
