@@ -4,29 +4,30 @@
     <title>Toivo</title>
     <%= include_gon %>
 
-    <%= csrf_meta_tags %>
     <link rel="icon" href="http://example.com/favicon.png">
      <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
     <!-- mobile optimization -->
     <meta name=“viewport” content=“width=device width, initial-scale=1.0”>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- Braintree JavaScript -->
+    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
     <%= csrf_meta_tags %>
 
   </head>
 
   <body>
+
     <%= render partial: "layouts/navbar" %>
     <%= yield %>
     <%=render partial: "layouts/footer" %>
-    <!-- Latest JQuery scripts -->
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <!-- Braintree JavaScript -->
-    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
   </body>
 </html>

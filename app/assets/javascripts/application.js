@@ -41,4 +41,3 @@ $(function(){
    });
 
 });
-   /* end typed element */
