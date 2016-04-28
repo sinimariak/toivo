@@ -19,22 +19,22 @@
           
           <div class="form-group col-lg-12">
             <label>Title</label>
-            <input type="" name="" class="form-control" id="" value="" <%= f.text_field :title %></>
+            <%= f.text_field :title, class:"form-control" %>
           </div>
           
           <div class="form-group col-lg-12">
             <label>Price</label>
-            <input type="" name="" class="form-control" id="" value="" <%= f.number_field :price %></>
+            <%= f.number_field :price, class:"form-control" %>
           </div>
                   
           <div class="form-group col-lg-12">
             <label>Details</label>
-            <input type="" name="" class="form-control" id="" value="" <%= f.text_area :details %></>
+            <%= f.text_area :details, class:"form-control" %>
           </div>  
 
           <div class="form-group col-lg-12">
             <label>Tag</label>
-            <%= f.select(:tag, options_for_select([["None", nil], ["Arts & Craft", "Arts & Craft"], ["Literature & Translation", "Literature & Translation"], ["Music & Entertainment", "Music & Entertainment"], ["Tech & IT", "Tech & IT"], ["Education & Training", "Education & Training"], ["Home & Wellbeing", "Home & Wellbeing"]])) %> </>
+            <%= f.select(:tag, options_for_select([["None", nil], ["Arts & Craft", "Arts & Craft"], ["Literature & Translation", "Literature & Translation"], ["Music & Entertainment", "Music & Entertainment"], ["Tech & IT", "Tech & IT"], ["Education & Training", "Education & Training"], ["Home & Wellbeing", "Home & Wellbeing"]])) %>
           </div>         
           
           <div class="form-group col-lg-12">
