@@ -20,7 +20,7 @@ class GigsController < ApplicationController
   def show
     @gig = Gig.find(params[:id])
     @review = Review.new
-    @reviews = Review.where(id: @gig.id).all
+    @reviews = Review.where(gig_id: @gig.id).all
     
   end
 
